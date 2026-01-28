@@ -112,7 +112,49 @@ def printList(listIn):
 
 # ~~~~~~~ MAIN LOGIC ~~~~~~~
 def main():
-    pass
+    appOn = True
+    userList = loadList()
+    while appOn:
+        print("Welcome to List Manager! Choose an option:")
+        print("1. Print List")
+        print("2. Add Items")
+        print("3. Remove Items")
+        print("4. Edit Items")
+        print("5. Move Items")
+        print("6. Exit Application")
+        userChoice = input(" --> ")
+
+        if userChoice == "1":
+            printList(userList)
+
+        elif userChoice == "2":
+            addOn = True
+            while addOn:
+                printList(userList)
+                addOn = addItems(userList)
+
+        elif userChoice == "3":
+            removeOn = True
+            while removeOn:
+                removeOn = removeItems(userList)
+
+        elif userChoice == "4":
+            editOn = True
+            while editOn:
+                editOn = editItems(userList)
+
+        elif userChoice == "5":
+            moveOn = True
+            while moveOn:
+                moveOn = moveItems(userList)
+
+        elif userChoice == "6":
+            appOn = False
+
+        else:
+            print("Invalid option!")
     
 
+
+# ~~~~~~~ MAIN CALL ~~~~~~~~
 main()
