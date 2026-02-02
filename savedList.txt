@@ -1,4 +1,5 @@
-cheerios
-donut
 bananas
-french fries
+cherries
+donuts
+eggs
+apples
